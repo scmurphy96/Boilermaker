@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
+require('../../localSecrets');
 module.exports = router;
 
 router.get('/google', passport.authenticate('google', { scope: 'email' }));
